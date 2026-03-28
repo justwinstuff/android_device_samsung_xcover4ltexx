@@ -1,14 +1,15 @@
-/system ext4 /dev/block/platform/13540000.dwmmc0/by-name/SYSTEM flags=backup=0;display="System"
-/system_image emmc /dev/block/platform/13540000.dwmmc0/by-name/SYSTEM flags=backup=1
-/cache ext4 /dev/block/platform/13540000.dwmmc0/by-name/CACHE flags=display="Cache"
-/data ext4 /dev/block/platform/13540000.dwmmc0/by-name/USERDATA flags=display="Data";encryptable=footer;length=-16384
+/dev/block/platform/13540000.dwmmc0/by-name/SYSTEM    /system        ext4    ro    wait
+/dev/block/platform/13540000.dwmmc0/by-name/SYSTEM    /system_image  emmc    defaults    wait
 
-/boot emmc /dev/block/platform/13540000.dwmmc0/by-name/BOOT flags=backup=1;display="Kernel"
-/recovery emmc /dev/block/platform/13540000.dwmmc0/by-name/RECOVERY flags=backup=1;display="Recovery"
+/dev/block/platform/13540000.dwmmc0/by-name/CACHE     /cache         ext4    rw    wait
+/dev/block/platform/13540000.dwmmc0/by-name/USERDATA  /data          ext4    rw    wait,length=-16384
 
-/misc emmc /dev/block/platform/13540000.dwmmc0/by-name/OTA flags=backup=0;display="Misc"
-/efs emmc /dev/block/platform/13540000.dwmmc0/by-name/EFS flags=backup=1;display="EFS
-/radio emmc /dev/block/platform/13540000.dwmmc0/by-name/RADIO flags=backup=1;display="Baseband"
+/dev/block/platform/13540000.dwmmc0/by-name/BOOT      /boot          emmc    defaults    wait
+/dev/block/platform/13540000.dwmmc0/by-name/RECOVERY  /recovery      emmc    defaults    wait
 
-/external_sd auto /dev/block/mmcblk1p1 /dev/block/mmcblk1 flags=display="MicroSD";storage;wipeingui;removable
-/usb-otg auto /dev/block/sda1 /dev/block/sda flags=display="USB OTG";storage;wipeingui;removable
+/dev/block/platform/13540000.dwmmc0/by-name/OTA       /misc          emmc    defaults    wait
+/dev/block/platform/13540000.dwmmc0/by-name/EFS       /efs           ext4    rw    wait
+/dev/block/platform/13540000.dwmmc0/by-name/RADIO     /radio         emmc    defaults    wait
+
+/dev/block/mmcblk1p1    /external_sd   vfat    defaults    voldmanaged=sdcard:auto
+/dev/block/sda1         /usb-otg       vfat    defaults    voldmanaged=usb:auto

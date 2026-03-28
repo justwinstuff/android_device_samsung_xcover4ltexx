@@ -18,7 +18,7 @@
 set -e
 
 # Required!
-export DEVICE=xcover4ltexx
+export DEVICE=xcover4lte
 export DEVICE_COMMON=universal7570-common
 export VENDOR=samsung
 

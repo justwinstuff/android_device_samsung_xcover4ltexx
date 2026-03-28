@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: Apache-2.0
 
 # Platform
-DEVICE_PATH := device/samsung/xcover4ltexx
+DEVICE_PATH := device/samsung/xcover4lte
 BOARD_VENDOR := samsung
 TARGET_BOARD_PLATFORM := exynos5
 TARGET_SOC := exynos7570
@@ -25,7 +25,7 @@ TARGET_2ND_CPU_VARIANT := cortex-a53
 
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/samsung/exynos7570
-TARGET_KERNEL_CONFIG := exynos7570-xcover4ltexx_defconfig
+TARGET_KERNEL_CONFIG := exynos7570-xcover4lte_defconfig
 TARGET_KERNEL_ARCH := arm64
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048

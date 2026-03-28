@@ -18,7 +18,7 @@
 set -e
 
 VENDOR=samsung
-DEVICE=xcover4ltexx
+DEVICE=xcover4lte
 
 export INITIAL_COPYRIGHT_YEAR=2018
 

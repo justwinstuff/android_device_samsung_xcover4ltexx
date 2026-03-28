@@ -12,4 +12,4 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml
 
 # Call the proprietary blobs (This is usually where your build.prop content comes from)
-$(call inherit-product, vendor/samsung/xcover4ltexx/xcover4ltexx-vendor.mk)
+$(call inherit-product, vendor/samsung/xcover4lte/xcover4lte-vendor.mk)
